@@ -7,6 +7,7 @@ Sistema de controle de transporte intercampi para UFSM
             Cadastro de Usuário
                 Nome
                 Matricula/SIAPE
+                Senha
                 Categoria
                     Docente
                     Técnico Administrativo
