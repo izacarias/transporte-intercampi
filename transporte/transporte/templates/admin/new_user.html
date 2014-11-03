@@ -1,0 +1,47 @@
+{% extends "admin/login.html" %}
+{% block content %}
+    <h3>Preencha o formulário abaixo para criar seu usuário:</h3>            
+    <form action="/novo-usuario/" method="POST">
+    <h2>Cadastro de Usuário</h2>
+        {% csrf_token %}
+        <div class="form-row">
+            {{ form.username.errors }}
+            <label class="required">{{ 'Matrícula/SIAPE' }}:</label> {{ form.username }}
+        </div>
+         <div class="form-row">
+            {{ form.password.errors }}
+            <label class="required">{{ 'Senha' }}:</label> {{ form.password }}
+        </div>
+        <div class="form-row">
+            {{ form.non_field_errors }}
+            <label class="required">{{ 'Confirmação de Senha' }}:</label> {{ form.confirm_password }}
+        </div>
+        <div class="form-row">
+            {{ form.first_name.errors }}
+            <label class="required">{{ 'Nome' }}:</label> {{ form.first_name }}
+        </div>
+        <div class="form-row">
+            {{ form.last_name.errors }}
+            <label class="required">{{ 'Sobrenome' }}:</label> {{ form.last_name }}
+        </div>
+        <div class="form-row">
+            {{ form.email.errors }}
+            <label class="required">{{ 'E-mail' }}:</label> {{ form.email }}
+        </div>
+        <div class="form-row">
+            {{ form.telefone.errors }}
+            <label class="required">{{ 'Telefone' }}:</label> {{ form.telefone }}
+        </div>
+        <div class="form-row">
+            {{ form.rg.errors }}
+            <label class="required">{{ 'RG' }}:</label> {{ form.rg }}
+        </div>
+        <div class="form-row">
+            {{ form.categoria.errors }}
+            <label class="required">{{ 'Categoria' }}:</label> {{ form.categoria }}
+        </div>
+        <div class="submit-row">
+            <input type="submit" value="Cadastrar">
+        </div>
+    </form> 
+{% endblock %}
