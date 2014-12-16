@@ -1,6 +1,7 @@
 # -*-coding: utf-8 -*-
 import datetime
 from django.db import models
+from django.shortcuts import redirect
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth.models import User
 
@@ -47,6 +48,7 @@ class LocalSaida(models.Model):
     class Meta:
         verbose_name = u'Local Saída'
         verbose_name_plural = u'Locais Saída'
+        ordering = ['hora']
 
     def __unicode__(self):
         return self.hora.strftime('%H:%M') + ' - ' + self.local
@@ -60,6 +62,7 @@ class Viagem(models.Model):
     class Meta:
         verbose_name = u'Viagem'
         verbose_name_plural = u'Viagens'
+        ordering = ['-data']
 
     def __unicode__(self):
         return self.data.strftime('%d/%m/%Y')
@@ -74,13 +77,22 @@ class Agendamento(models.Model):
     viagem = models.ForeignKey(Viagem, verbose_name=u'Viagem')
     destino = models.ForeignKey(Destino,verbose_name=u'Destino')
     localSaida = models.ForeignKey(LocalSaida, verbose_name=u'Local de Saída')
-    ida = models.BooleanField('Ida')
-    volta = models.BooleanField('Volta')
+    idaVolta = models.BooleanField('Ida e Volta', help_text="Marque somente se for voltar no mesmo dia para a cidade de origem utilizando o transporte.")
     usuario = models.ForeignKey(Usuario, verbose_name=u'Usuário')
 
     class Meta:
         verbose_name = u'Agendamento'
         verbose_name_plural = u'Agendamentos'
+        ordering = ['-viagem']
 
     def __unicode__(self):
         return self.viagem.data.strftime('%d/%m/%Y')
+
+
+
+
+
+
+
+
+

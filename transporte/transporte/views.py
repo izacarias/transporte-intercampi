@@ -33,4 +33,3 @@ def new_user(request):
     else:
         form = FormUsuario()
         return render(request,"admin/new_user.html",{'form':form})
-

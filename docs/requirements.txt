@@ -2,44 +2,44 @@ Sistema de controle de transporte intercampi para UFSM
 
     Requisitos básicos
         
-        Autenticação Usuário
-        Entrada de Dados
-            Cadastro de Usuário
-                Nome
-                Matricula/SIAPE
-                Senha
-                Categoria
-                    Docente
-                    Técnico Administrativo
-                    Aluno
-                RG
-                Telefone
-                E-mail
-            Cadastro de Agendamento
-                Dia
-                Hora
-                Ida?
-                Volta?
-                Origem
-                    Santa Maria
-                        17:00 - Frente Reitoria - UFSM
-                            Volta
-                    Frederico Westphalen
-                        04:00 - Campus Frederico Westphalen
-                        04:15 - Frente Catedral
-                            Ida
-                            Ida e Volta
-                    Palmeira das Missões
-                        05:15 - Campus Palmeira das Missões
-                            Ida
-                            Ida e Volta
-                Destino
-                    Santa Maria
-                    Frederico Westphalen
-                    Palmeira das Missões
-                Validação 
-                    Transporte Disponível Terças e Sextas
-                    Prazo limite para agendamento 12:00 do dia anterior(retornar mensagem contato direção)
+    x    Autenticação Usuário
+    x    Entrada de Dados
+    x        Cadastro de Usuário
+    x            Nome
+    x            Matricula/SIAPE
+    x            Senha
+    x            Categoria
+    x                Docente
+    x                Técnico Administrativo
+    x                Aluno
+    x            RG
+    x            Telefone
+    x            E-mail
+    x        Cadastro de Agendamento
+    x            Dia
+    x            Hora
+    x            Ida?
+    x            Volta?
+    x            Origem
+    x                Santa Maria
+    x                   17:00 - Frente Reitoria - UFSM
+    x                        Volta
+    x                Frederico Westphalen
+    x                    04:00 - Campus Frederico Westphalen
+    x                    04:15 - Frente Catedral
+    x                        Ida
+    x                        Ida e Volta
+    x                Palmeira das Missões
+    x                    05:15 - Campus Palmeira das Missões
+    x                        Ida
+    x                        Ida e Volta
+    x            Destino
+    x                Santa Maria
+    x                Frederico Westphalen
+    x                Palmeira das Missões
+    x            Validação 
+    x                Transporte Disponível Terças e Sextas
+    x                Prazo limite para agendamento 12:00 do dia anterior(retornar mensagem contato direção)
                     Máximo 22 lugares por viagem
                 Cadastro de Reserva
                     Caso não haja mais vagas, redirecionar para cadastro de reserva, podendo ser alterado pelo admin
